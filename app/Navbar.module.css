@@ -1,0 +1,64 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  background: rgba(20, 20, 30, 0.7);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 24px 0 rgba(0,0,0,0.12);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logoText {
+  font-family: 'Space Grotesk', 'Inter', Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00ffe7;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px #00ffe7cc;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  color: #ededed;
+  font-size: 1.1rem;
+  font-family: 'Inter', Arial, sans-serif;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.menu li a:hover {
+  background: #00ffe733;
+  color: #00ffe7;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75rem 1rem;
+  }
+  .menu {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}

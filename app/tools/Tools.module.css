@@ -1,0 +1,123 @@
+.main {
+  min-height: 100vh;
+  padding: 3rem 1rem 2rem 1rem;
+  background: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+  z-index: 1;
+}
+
+.card {
+  background: rgba(20, 20, 30, 0.92);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 #00ffe733;
+  padding: 2rem 1.5rem;
+  min-width: 260px;
+  max-width: 320px;
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) both;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 8px 40px 0 #00ffe7cc;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.icon {
+  filter: drop-shadow(0 0 16px #00ffe7cc) drop-shadow(0 0 32px #0fffc1aa);
+  border-radius: 12px;
+  background: #0fffc1;
+  padding: 0.3rem;
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  animation: floatTech 2.5s ease-in-out infinite alternate, iconGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatTech {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-12px) scale(1.08) rotate(-2deg); }
+}
+
+@keyframes iconGlow {
+  0% { filter: drop-shadow(0 0 8px #00ffe7cc) drop-shadow(0 0 16px #0fffc1aa); }
+  100% { filter: drop-shadow(0 0 24px #00ffe7cc) drop-shadow(0 0 48px #0fffc1aa); }
+}
+
+.card h2 {
+  color: #00ffe7;
+  font-family: 'Space Grotesk', 'Inter', Arial, sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #ededed;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background: #00ffe7;
+  color: #171717;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.2rem 0.7rem;
+  box-shadow: 0 2px 8px 0 #00ffe7cc;
+}
+
+.tryBtn {
+  background: linear-gradient(90deg, #00ffe7 60%, #0fffc1 100%);
+  color: #171717;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 2px 12px 0 #00ffe7cc;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.tryBtn:hover {
+  background: #0fffc1;
+  color: #0a0a0a;
+  box-shadow: 0 4px 24px 0 #00ffe7cc;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
